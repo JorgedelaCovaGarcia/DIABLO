@@ -5,10 +5,16 @@ using UnityEngine;
 public class SistemaPatrulla : MonoBehaviour
 {
     [SerializeField] private Transform ruta;
-    // Start is called before the first frame update
+
+    private List<Transform> listadoPuntos = new List<Transform>();
+
+    private Transform[] array = new Transform[50];
     void Start()
     {
-        
+        foreach(Transform punto in ruta)
+        {
+
+        }
     }
 
     // Update is called once per frame
