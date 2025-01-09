@@ -12,6 +12,8 @@ public class SistemaPatrulla : MonoBehaviour
 
     [SerializeField] private NavMeshAgent agent;
 
+    [SerializeField] private float velocidadPatrulla;
+
     private List<Vector3> listadoPuntos = new List<Vector3>();
 
     private int indiceDestinoActual = -1;
@@ -30,6 +32,11 @@ public class SistemaPatrulla : MonoBehaviour
         {
             listadoPuntos.Add(t.position);
         }
+    }
+
+    private void OnEnable()
+    {
+        agent.speed = velocidadPatrulla;
     }
     private IEnumerator PatrullarYEsperar()
     {
