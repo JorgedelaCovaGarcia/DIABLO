@@ -6,13 +6,15 @@ using UnityEngine.AI;
 
 public class SistemaPatrulla : MonoBehaviour
 {
+    [SerializeField] private Enemigo main;
+
     [SerializeField] private Transform ruta;
 
-    private NavMeshAgent agent;
+    [SerializeField] private NavMeshAgent agent;
 
     private List<Vector3> listadoPuntos = new List<Vector3>();
 
-    private int indiceDestinoActual = 0;
+    private int indiceDestinoActual = -1;
 
     private Vector3 destinoActual;
     void Start()
@@ -22,12 +24,11 @@ public class SistemaPatrulla : MonoBehaviour
 
     private void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();
+        main.Patrulla = this;
+        
+        foreach (Transform t in ruta)
         {
-            foreach (Transform t in ruta)
-            {
-                listadoPuntos.Add(t.position);
-            }
+            listadoPuntos.Add(t.position);
         }
     }
     private IEnumerator PatrullarYEsperar()
@@ -45,11 +46,19 @@ public class SistemaPatrulla : MonoBehaviour
     private void CalcularDestino()
     {
         indiceDestinoActual++;
-        if(indiceDestinoActual > listadoPuntos.Count)
+        if(indiceDestinoActual >= listadoPuntos.Count)
         {
             indiceDestinoActual = 0;
         }
 
         destinoActual = listadoPuntos[indiceDestinoActual];
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            main.ActivarCombate(other.transform);
+        }
     }
 }
