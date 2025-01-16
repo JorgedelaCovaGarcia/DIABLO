@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -67,5 +68,10 @@ public class Player : MonoBehaviour
             //Reseteo el stoppingDistance original.
             agent.stoppingDistance = 0f;
         }
+    }
+
+    public void HacerDanho(float danhoAtaque)
+    {
+        Debug.Log("me hace daño = " +danhoAtaque);
     }
 }

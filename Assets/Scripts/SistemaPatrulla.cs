@@ -21,7 +21,7 @@ public class SistemaPatrulla : MonoBehaviour
     private Vector3 destinoActual;
     void Start()
     {
-        StartCoroutine(PatrullarYEsperar());
+        
     }
 
     private void Awake()
@@ -36,7 +36,9 @@ public class SistemaPatrulla : MonoBehaviour
 
     private void OnEnable()
     {
+        agent.stoppingDistance = 0;
         agent.speed = velocidadPatrulla;
+        StartCoroutine(PatrullarYEsperar());
     }
     private IEnumerator PatrullarYEsperar()
     {

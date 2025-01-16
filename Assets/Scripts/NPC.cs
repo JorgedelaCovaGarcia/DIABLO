@@ -5,11 +5,16 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class NPC : MonoBehaviour
+public class NPC : MonoBehaviour , IInteractuable
 {
     [SerializeField] private Dialogo miDialogo;
     [SerializeField] private float duracionRotacion;
     [SerializeField] private Transform cameraPoint;
+
+    public void Interactuar()
+    {
+        throw new NotImplementedException();
+    }
 
     internal void Interactuar(Transform interactuador)
     {

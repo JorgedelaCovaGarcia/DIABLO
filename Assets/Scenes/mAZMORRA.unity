@@ -5171,7 +5171,6 @@ Transform:
   m_Children:
   - {fileID: 2449677797592814832}
   - {fileID: 1778617443}
-  - {fileID: 1251897651}
   - {fileID: 1736481826}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5186,15 +5185,15 @@ NavMeshAgent:
   m_AgentTypeID: -1372625422
   m_Radius: 0.5
   m_Speed: 1.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_Acceleration: Infinity
+  avoidancePriority: 80
+  m_AngularSpeed: 600
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &542310033
@@ -12454,53 +12453,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1237733043}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1251897650
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1251897651}
-  - component: {fileID: 1251897652}
-  m_Layer: 0
-  m_Name: SistemaCombate
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1251897651
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251897650}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 542310030}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1251897652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251897650}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bf3f2ba0726aaf45b8036944b87d615, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  main: {fileID: 542310033}
-  agent: {fileID: 542310031}
-  velocidadCombate: 3
 --- !u!1001 &1284295631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15612,7 +15564,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   m_UseGeometry: 0
-  m_DefaultArea: 0
+  m_DefaultArea: 3
   m_GenerateLinks: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
@@ -15900,7 +15852,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736481825}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b918cdb57f22be4a977019c05cf80af, type: 3}
   m_Name: 
@@ -15908,7 +15860,7 @@ MonoBehaviour:
   main: {fileID: 542310033}
   ruta: {fileID: 1778617443}
   agent: {fileID: 542310031}
-  velocidadPatrulla: 0
+  velocidadPatrulla: 3
 --- !u!135 &1736481828
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23819,6 +23771,7 @@ GameObject:
   - component: {fileID: 2449677797592814832}
   - component: {fileID: 3077313516426628684}
   - component: {fileID: 3077313516426628683}
+  - component: {fileID: 3077313516426628685}
   m_Layer: 0
   m_Name: Enemigo Visual
   m_TagString: Untagged
@@ -23860,6 +23813,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3077313516426628685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3077313516426628682}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf3f2ba0726aaf45b8036944b87d615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 542310033}
+  agent: {fileID: 542310031}
+  velocidadCombate: 5
+  distanciaAtaque: 2
+  danhoAtaque: 0
+  anim: {fileID: 3077313516426628684}
 --- !u!1 &3146847509749166790
 GameObject:
   m_ObjectHideFlags: 0
