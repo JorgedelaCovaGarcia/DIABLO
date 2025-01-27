@@ -13,6 +13,8 @@ public class SistemaDialogo : MonoBehaviour
     [SerializeField] private TMP_Text textoDialogo;
     [SerializeField] private Transform npcCamera;
 
+    [SerializeField]
+    private EventManager eventManager;
 
     private bool escribiendo;
     private int indiceFraseActual = 0;
@@ -20,6 +22,7 @@ public class SistemaDialogo : MonoBehaviour
     private Dialogo dialogoActual;
 
     public static SistemaDialogo sistema;
+
 
     // Awake se ejecuta ANTES del Start() independientemente de que el game object este activo o no
     void Awake()
@@ -93,8 +96,16 @@ public class SistemaDialogo : MonoBehaviour
         marcoDialogo.SetActive(false);
         indiceFraseActual = 0;
         escribiendo = false ;
+
+        if (dialogoActual.tieneMision)
+        {
+            eventManager.NuevaMision(dialogoActual.mision);
+        }
+
         dialogoActual = null;
+        
 
     }
+    
    
 }
