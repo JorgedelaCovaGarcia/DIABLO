@@ -16,4 +16,7 @@ MonoBehaviour:
   - "\xBFQue paza pisha?"
   - Mira primo, me han quitado ahi alante er movi.
   - Ve a mira a ve si puedeh recuperarmelo anda sur mano.
+  frasesClip: []
   tiempoEntreLetras: 0
+  tieneMision: 1
+  mision: {fileID: 0}
