@@ -11,7 +11,8 @@ public class ToggleMision : MonoBehaviour
 
     private Toggle toggleVisual;
 
-    public TMP_Text TextoMision { get => textoMision; set => textoMision = value; }
+    public TMP_Text TextoMision { get => textoMision; }
+    public Toggle ToggleVisual { get => toggleVisual; }
 
     private void Awake()
     {
