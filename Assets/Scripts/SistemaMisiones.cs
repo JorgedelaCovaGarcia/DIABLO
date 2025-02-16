@@ -19,12 +19,13 @@ public class SistemaMisiones : MonoBehaviour
 
     private void EncenderToggleMision(MisionSO mision)
     {
+        togglesMision[mision.indiceMision].gameObject.SetActive(true);
         togglesMision[mision.indiceMision].TextoMision.text = mision.ordenInicial;
         if(mision.tieneRepeticion)
         {
             togglesMision[mision.indiceMision].TextoMision.text += "(" + mision.repeticionActual + "/" + mision.totalRepeticiones + ")";
         }
-        togglesMision[mision.indiceMision].gameObject.SetActive(true);
+        
     }
     private void ActualizarToggleMision(MisionSO mision)
     {

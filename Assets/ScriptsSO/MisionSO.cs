@@ -12,7 +12,7 @@ public class MisionSO : ScriptableObject
     public int totalRepeticiones;
     public int indiceMision; //indice unico que representa a cada mision
 
-    [SerializeField]
+    [NonSerialized]
     public int repeticionActual;
 
 

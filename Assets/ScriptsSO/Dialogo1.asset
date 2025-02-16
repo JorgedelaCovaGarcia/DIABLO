@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Dialogo1
   m_EditorClassIdentifier: 
   frases:
-  - "\xBFQue paza pisha?"
-  - Mira primo, me han quitado ahi alante er movi.
-  - Ve a mira a ve si puedeh recuperarmelo anda sur mano.
+  - "Hola, \xBFcomo has llegado hasta aqui?..."
+  - Bueno da igual, necesito que recuperes unas setas mutantes que he perido en la
+    mazmorra,
+  - Cuando lo encuentres vuelve conmigo.
   frasesClip: []
-  tiempoEntreLetras: 0
+  tiempoEntreLetras: 0.02
   tieneMision: 1
-  mision: {fileID: 0}
+  mision: {fileID: 11400000, guid: 982a6dc3996dbed4aa56fc25081b6905, type: 2}

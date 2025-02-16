@@ -7,12 +7,8 @@ public class SetaDeMuerte : MonoBehaviour, IInteractuable
     private Outline outline;
     [SerializeField] private MisionSO mision;
     [SerializeField] private EventManager eventManager;
-    private void Awake()
-    {
-        outline = GetComponent<Outline>(); 
-
-    }
-    public void Interactuar()
+  
+    public void Interactuar(Transform interactor)
     {
         mision.repeticionActual++;//aumentamos en 1 la repeticion de la mision
 
@@ -28,7 +24,11 @@ public class SetaDeMuerte : MonoBehaviour, IInteractuable
         
         Destroy(gameObject);
     }
+    private void Awake()
+    {
+        outline = GetComponent<Outline>();
 
+    }
     private void OnMouseEnter()
     {
         outline.enabled = true;

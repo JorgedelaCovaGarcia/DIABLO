@@ -39,7 +39,7 @@ public class NPC : MonoBehaviour , IInteractuable
         throw new NotImplementedException();
     }
 
-    internal void Interactuar(Transform interactuador)
+    public void Interactuar(Transform interactuador)
     {
         //Poco a poco voy rotando haia el interactuador y cuando termine de rotarme... se inicia la interaccion
         transform.DOLookAt(interactuador.position, duracionRotacion, AxisConstraint.Y).OnComplete(IniciarInteraccion);

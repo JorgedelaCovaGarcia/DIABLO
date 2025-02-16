@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "EventManager")]
-public class EventManager : MonoBehaviour
+public class EventManager : ScriptableObject
 {
 
     //creo un evento.
@@ -14,7 +14,7 @@ public class EventManager : MonoBehaviour
     public void NuevaMision(MisionSO mision)
     {
         //Lanzar/disparar el evento/notificacion.
-        OnNuevaMision.Invoke(mision);
+        OnNuevaMision?.Invoke(mision);
     }
 
     public void ActualizarMision(MisionSO mision)
@@ -27,3 +27,4 @@ public class EventManager : MonoBehaviour
         OnTerminarMision?.Invoke(mision);
     }
 }
+
