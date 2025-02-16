@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4996687539917961186
+--- !u!1 &1470312250073775909
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6905554115402784180}
-  - component: {fileID: 188006981392734668}
-  - component: {fileID: 2360556804566291884}
+  - component: {fileID: 8631706187271556871}
+  - component: {fileID: 4745225064894125639}
+  - component: {fileID: 6732026544306304972}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -18,34 +18,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6905554115402784180
+--- !u!4 &8631706187271556871
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4996687539917961186}
+  m_GameObject: {fileID: 1470312250073775909}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.289, z: 0.254}
+  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.007, y: 0.288, z: 0.237}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 901545384655155356}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &188006981392734668
+--- !u!108 &4745225064894125639
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4996687539917961186}
+  m_GameObject: {fileID: 1470312250073775909}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.51
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -88,20 +88,20 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 2164
+  m_ColorTemperature: 2105
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &2360556804566291884
+--- !u!114 &6732026544306304972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4996687539917961186}
+  m_GameObject: {fileID: 1470312250073775909}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
@@ -192,7 +192,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: bcc66fb6042b14d46bc9d27fa37aae9b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6905554115402784180}
+      addedObject: {fileID: 8631706187271556871}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcc66fb6042b14d46bc9d27fa37aae9b, type: 3}
 --- !u!4 &901545384655155356 stripped
